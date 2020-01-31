@@ -20,6 +20,7 @@ let app;
 
     let firstParagraph;
 
+
     /**
      * Variable initialization in this function
      *
@@ -30,19 +31,22 @@ let app;
         // links the variable to the element id
         largeButton = document.getElementById("largeButton");
         // changes button text to learn more
-        largeButton.textContent = "Learn More"
+        largeButton.textContent = "Learn More";
 
         // Part 1b.
         // creates a new h3 element
         h3 = document.createElement("h3");
-        // sets the content of the element and inserts it before the button
-        h3.textContent = "Name: Roshan Persaud 100560748"
-        h3.insertBefore(largeButton);
+        // sets the content of the element 
+        h3.textContent = "Name: Roshan Persaud 100560748";
+        // references the first h3 tag
+        let h3 = document.getElementsByTagName("h3")[0];
+        // inserts it before the button
+        h3.parentNode.insertBefore(largeButton, h3);
 
         // Part 1c.
         // links the variable to the element id and then changes the content of the element
-        firstParagraph = document.getElementById("firstParagraph")
-        firstParagraph.textContent = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods."
+        firstParagraph = document.getElementById("firstParagraph");
+        firstParagraph.textContent = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods.";
 
         // Part 1d.
         // hides the content of the first paragraph element
@@ -72,6 +76,7 @@ let app;
      */
     function Main()
     {
+
 
     }
 
