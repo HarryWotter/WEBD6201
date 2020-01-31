@@ -18,7 +18,7 @@ let app;
 
     let h3;
 
-    let fisrtParagraph;
+    let firstParagraph;
 
     /**
      * Variable initialization in this function
@@ -41,12 +41,27 @@ let app;
 
         // Part 1c.
         // links the variable to the element id and then changes the content of the element
-        fisrtParagraph = document.getElementById("firstParagraph")
-        fisrtParagraph.textContent = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods."
+        firstParagraph = document.getElementById("firstParagraph")
+        firstParagraph.textContent = "JavaScript is a prototype-based language, and every object in JavaScript has a hidden internal property called Prototype that can be used to extend object properties and methods."
 
         // Part 1d.
         // hides the content of the first paragraph element
-        fisrtParagraph.style.display = "none";
+        firstParagraph.style.display = "none";
+
+        // Part 2a.
+        // creates a click event for the large button
+        largeButton.addEventListener("click", function(){
+            // Part 2b.
+            // makes it so the you can toggle between the two text contents whenever you click the button
+            largeButton.textContent = (largeButton.textContent == "Hide Details") ? "Learn More" : "Hide Details";
+            
+            // Part 2c.
+            // makes the first paragraph text hidden if the large button content is Learn More
+            if( largeButton.textContent == "Learn More")
+            {
+                firstParagraph.style.display = "none";
+            }
+        });
 
         Main();
     }
